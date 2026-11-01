@@ -1,105 +1,196 @@
-# HealthConnect Rwanda – Healthcare Data Analytics & Business Intelligence Project
+# HealthConnect Rwanda – Healthcare Analytics & Business Intelligence Project.
 
-**AnalystLab Africa Internship | Week 6 | Data Analytics Track**
+## 1. Project Overview
 
-## Project Overview
+The **HealthConnect Rwanda Healthcare Analytics & Business Intelligence Project** is an end-to-end healthcare data analytics solution developed to evaluate healthcare operations, clinical outcomes, patient demographics, financial performance, and service satisfaction across healthcare facilities in Rwanda.
 
-The **HealthConnect Rwanda Data Analytics Project** is an end-to-end healthcare Business Intelligence project focused on analyzing healthcare operations, patient demographics, clinical activity, financial performance, insurance claims, and patient experience across 20 healthcare facilities in Rwanda.
+The project focuses on transforming healthcare datasets into meaningful business intelligence through data preparation, relational data modelling, KPI development, interactive Power BI dashboards, and analytical testing.
 
-The project transforms healthcare data into actionable insights through data preparation, relational data modelling, SQL analysis, DAX calculations, and a six-page interactive Power BI executive dashboard.
+The solution is designed to support healthcare management in understanding operational performance, identifying reporting gaps, monitoring financial indicators, and making evidence-based decisions.
 
-## Business Objectives
+## 2. Project Objectives
 
-- Evaluate healthcare service delivery and appointment activity.
-- Analyze patient demographics and diagnosis patterns.
-- Assess billing, payment collection, and insurance claim performance.
-- Examine healthcare resources, including beds, rooms, and medical equipment.
-- Analyze patient satisfaction and feedback.
-- Provide evidence-based recommendations to support management decisions.
+The main objectives are to:
 
-## Tools & Technologies
+- Analyse healthcare operations and appointment activity.
+- Evaluate patient demographics and clinical diagnosis patterns.
+- Monitor financial performance, billing, and payment collection.
+- Examine healthcare service delivery and patient satisfaction.
+- Develop an integrated Power BI executive dashboard suite.
+- Establish a structured analytical data model.
+- Validate KPIs, calculations, relationships, and dashboard outputs.
+- Identify data quality and reconciliation limitations requiring further investigation.
 
-- **Power BI Desktop:** Interactive dashboards, data modelling, visualizations, and DAX measures.
-- **SQL:** Data exploration, querying, and analysis.
-- **Microsoft Excel:** Dataset inspection and data preparation.
-- **DAX:** KPI calculations, financial analysis, and performance measures.
-- **GitHub:** Project documentation and version control.
+## 3. Project Scope and Dataset Overview
 
-## Project Scope & Deliverables
+The project involved healthcare datasets covering different operational and analytical areas.
 
-### 1. Data Preparation & Modelling
-- Reviewed and prepared healthcare datasets.
-- Examined data structures, fields, identifiers, and relationships.
-- Developed a relational data model using fact and dimension tables.
-- Created analytical measures to support dashboard reporting.
+Key data coverage includes:
 
-### 2. Six-Page Power BI Executive Dashboard
+| Dataset / Area | Records or Coverage |
+|---|---:|
+| Patient Profiles | 20,000 |
+| Appointments | 5,000 |
+| Diagnosis Records | 60,000 |
+| Healthcare Facilities | 20 |
+| Medical Equipment | 4,000 records |
+| Bed Records | 2,000 records |
 
-The dashboard covers six analytical areas:
+The datasets support analysis of patient demographics, appointments, diagnoses, departments, facilities, billing, payments, and other healthcare operations.
 
-1. **Executive Overview** – High-level healthcare performance indicators.
-2. **Patient Demographics** – Patient distribution and demographic patterns.
-3. **Clinical Analysis** – Diagnosis activity and clinical service patterns.
-4. **Financial Performance** – Billing, payment collection, and insurance claims.
-5. **Operational Performance** – Staff, beds, equipment, facilities, and departments.
-6. **Patient Experience** – Satisfaction ratings, feedback, and rankings.
+## 4. Week 6 – Executive Dashboard Suite & System Integration Review
 
-### 3. Key Business Insights
+Week 6 focused on developing the HealthConnect Rwanda executive dashboard suite and establishing the analytical data model.
 
-**Financial Performance**
-- Gross billed revenue: **RWF 9.31 billion**.
-- Payments collected: **RWF 8.39 billion**.
-- Revenue allocated to matched appointments and departments: **RWF 771.13 million**.
-- Approximately **RWF 8.54 billion** in billing revenue remained unmatched to the available appointment records, highlighting a significant data reconciliation and attribution issue.
+### Key Activities
 
-**Patient Demographics & Clinical Activity**
-- Analyzed **20,000 patient profiles**.
-- Female patients represented 50.45%, while male patients represented 49.55%.
-- The most frequent recorded diagnosis entries included Gastritis (12,208), Diabetes (12,083), Hypertension (12,075), and Asthma (4,996).
+- Imported and reviewed relevant healthcare datasets.
+- Prepared and structured data for Power BI analysis.
+- Developed a relational analytical model using a star schema approach.
+- Created DAX measures for healthcare KPIs.
+- Designed a six-page executive dashboard suite.
+- Developed visualisations covering operational, clinical, demographic, financial, and service-related indicators.
+- Reviewed system integration and data relationships.
 
-**Insurance Performance**
-- The reported insurance claim approval rate was **49.98%**.
-- Claims not classified as approved require further investigation to distinguish pending, rejected, and other statuses.
+### Dashboard Coverage
 
-**Operational Resources**
-- Reviewed 2,000 bed records and 4,000 medical equipment records.
-- Identified limitations in the available resource-status data, preventing reliable calculation of actual bed and equipment utilization.
+The six-page dashboard suite was designed to cover:
 
-## Key Recommendations
+1. Healthcare Operations and Appointments.
+2. Clinical Outcomes and Diagnosis Analysis.
+3. Patient Demographics.
+4. Financial Performance and Billing.
+5. Patient Satisfaction and Feedback.
+6. Executive Overview and Performance Monitoring.
 
-- Improve appointment and billing record reconciliation.
-- Strengthen financial reporting and revenue attribution.
-- Investigate insurance claims that are not classified as approved.
-- Introduce consistent bed occupancy and equipment maintenance tracking.
-- Improve operational data collection across facilities.
-- Use patient feedback to identify service-quality improvement opportunities.
+### Key Analytical Highlights
 
-## Data Limitations
+- Patient demographic analysis covered 20,000 patient profiles.
+- Appointment analysis covered 5,000 appointment records.
+- Diagnosis analysis covered approximately 60,000 diagnosis records.
+- Total billed revenue was approximately RWF 9.31 billion.
+- Total collected revenue was approximately RWF 8.39 billion.
+- Revenue collection rate was approximately 90.1%.
+- The diagnosis analysis identified gastritis, diabetes, hypertension, malaria, and upper respiratory infections among the major diagnosis categories.
 
-The analysis identified important limitations that affect the interpretation of certain operational KPIs:
+## 5. Week 7 – Analytics Testing, KPI Validation & Dashboard Refinement
 
-- Some billing records could not be matched to the available appointment records.
-- Bed records were marked as available, without sufficient occupancy history.
-- Equipment records did not include verified operational status or downtime information.
-- The available data did not support reliable admission-rate or 30-day readmission-rate calculations.
-- Feedback data did not contain a confirmed date field for time-based complaint trends.
+Week 7 focused on testing the analytical outputs developed during Week 6 and documenting findings that could affect reporting accuracy and interpretation.
 
-These indicators were treated as data-constrained rather than reported as zero performance.
+### Key Activities
 
-## Project Outcome
+- Reviewed KPI calculations and dashboard outputs.
+- Examined appointment and billing record matching.
+- Investigated revenue allocation and reconciliation differences.
+- Reviewed data quality and blank-value handling.
+- Examined star schema relationships and department filtering.
+- Tested dashboard filters and interactions.
+- Captured screenshots and organised supporting evidence.
+- Documented outstanding findings for further investigation.
 
-The project demonstrates how healthcare data can be transformed into structured business intelligence to support financial accountability, operational visibility, clinical service analysis, and patient experience monitoring.
+### Key Testing Findings
 
-It also highlights the importance of data quality, accurate relationships, transparent KPI definitions, and responsible interpretation when building executive dashboards.
+| Testing Area | Observed Result |
+|---|---:|
+| Total Appointments | 5,000 |
+| Billing Appointment Records | Approximately 60,000 |
+| Unique Unmatched AppointmentIDs | Approximately 55,000 |
+| Department Allocated Revenue | RWF 771.13 million |
+| Unmatched Billing Revenue | Approximately RWF 8.54 billion |
+| Revenue_Summary | Approximately RWF 1.13 billion |
+| HC_Billing Revenue | Approximately RWF 9.31 billion |
+| Revenue Reconciliation Measure | Displayed 0 difference |
 
-## Skills Demonstrated
+These findings highlight differences in record matching, revenue allocation, and reconciliation that require further investigation.
 
-Power BI | DAX | SQL | Data Cleaning | Data Modelling | Business Intelligence | Healthcare Analytics | KPI Development | Data Visualization | Financial Analysis | Business Reporting | Data Storytelling
+The approximately RWF 8.54 billion associated with unmatched records is not classified as lost revenue or unpaid revenue. It represents billing revenue that has not been matched through the appointment-record matching process.
 
----
+The displayed zero reconciliation difference should also not be interpreted as proof that all revenue sources have been reconciled.
 
-**Project:** HealthConnect Rwanda – Healthcare Data Analytics & Business Intelligence  
-**Program:** AnalystLab Africa Internship  
-**Track:** Data Analytics  
-**Prepared by:** Victoria Kosgei  
+### Outstanding Findings
 
+The following matters remain documented:
+
+- Unmatched AppointmentIDs between appointment and billing records.
+- Billing revenue that has not been allocated through appointment matching.
+- Differences between Revenue_Summary and HC_Billing totals.
+- Blank results during department-level filtering.
+- The interpretation and calculation scope of the revenue reconciliation measure.
+- Outstanding balance and payment-status inconsistencies.
+
+These findings have been retained for further guidance and investigation rather than being presented as resolved issues.
+
+## 6. Data Modelling and Analytical Approach
+
+The project uses a structured analytical modelling approach to organise healthcare data and support reporting across different business areas.
+
+The intended model includes transactional fact tables and supporting dimension tables.
+
+Key modelling considerations include:
+
+- Defining primary and foreign keys.
+- Establishing appropriate relationships.
+- Supporting dimension-to-fact filtering.
+- Reviewing relationship cardinality and filter direction.
+- Validating matching keys across datasets.
+- Avoiding unsupported assumptions when interpreting incomplete or unmatched records.
+
+The model and its relationships were reviewed during Week 7, with some filtering and matching issues retained for further investigation.
+
+## 7. Tools and Technologies
+
+| Tool / Technology | Application |
+|---|---|
+| Microsoft Power BI | Dashboard development and visual analytics |
+| DAX | KPI calculations and analytical measures |
+| Microsoft Excel | Data inspection and preparation |
+| Data Modelling | Relational modelling and relationship design |
+| GitHub | Version control and project documentation |
+
+## 8. Project Deliverables
+
+The combined Week 6 and Week 7 project work includes:
+
+- Six-page executive Power BI dashboard suite.
+- Healthcare analytical data model.
+- KPI definitions and DAX measures.
+- Healthcare operational and financial analysis.
+- Executive dashboard review documentation.
+- KPI validation documentation.
+- Testing and validation records.
+- Testing activity tracker.
+- Evidence log and supporting screenshots.
+- Documented data quality and reconciliation findings.
+
+## 9. Project Limitations
+
+The interpretation of the results is subject to the available datasets and their relationships.
+
+Some limitations identified during the project include:
+
+- Unmatched appointment identifiers across datasets.
+- Inconsistent revenue totals between certain financial sources.
+- Limited facility and department identifier coverage.
+- Incomplete information for validating some operational measures.
+- Payment and billing status inconsistencies.
+- Department-filtering behaviour requiring further review.
+
+These limitations are documented to support transparent reporting and prevent unsupported conclusions.
+
+## 10. Project Progress
+
+| Project Stage | Focus | Status |
+|---|---|---|
+| Week 6 | Executive Dashboard Suite & System Integration Review | Completed |
+| Week 7 | Analytics Testing, KPI Validation & Dashboard Refinement | Completed |
+| Week 8 | Final Integration and Project Readiness | Upcoming |
+
+## 11. Conclusion
+
+The HealthConnect Rwanda project demonstrates the application of data analytics and business intelligence techniques to healthcare operations and management reporting.
+
+Through Week 6, the project established an executive dashboard suite and analytical data model. Week 7 extended this work through KPI review, analytical testing, revenue reconciliation investigation, data quality assessment, and dashboard testing.
+
+Together, these stages provide a structured foundation for the remaining project integration and final readiness activities.
+
+**Current Project Status:** Week 6 and Week 7 completed. Outstanding analytical findings documented for further guidance during Week 8.
