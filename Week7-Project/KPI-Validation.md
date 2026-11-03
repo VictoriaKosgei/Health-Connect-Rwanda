@@ -1,13 +1,5 @@
 # HealthConnect Rwanda – Week 7 KPI Validation Record
 
-**Project:** HealthConnect Rwanda Healthcare Analytics & Business Intelligence  
-**Program:** AnalystLab Africa Internship – Data Analytics Track  
-**Phase:** Week 7 – Testing, Validation and Refinement  
-**Prepared by:** Victoria Kosgei  
-**Reporting Period:** October–November 2026
-
----
-
 ## 1. Purpose of KPI Validation
 
 The purpose of this validation exercise was to review the HealthConnect Rwanda Power BI dashboard and verify that its key performance indicators (KPIs), calculations, and analytical outputs accurately represent the underlying datasets.
