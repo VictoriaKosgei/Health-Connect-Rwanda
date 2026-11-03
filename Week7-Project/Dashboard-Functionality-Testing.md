@@ -41,11 +41,3 @@ No interaction failure was reported in the completed checks.
 The dashboard functionality tests passed based on the interactions performed.
 
 The dashboard remains available for the final review and any additional refinements identified during the remaining Week 7 activities.
-
-## 6. Evidence
-
-Screenshots supporting the completed tests should be stored in:
-
-`08_Screenshots_Evidence/`
-
-The screenshots should show actual dashboard interactions and results.
