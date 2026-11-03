@@ -1,196 +1,311 @@
-# HealthConnect Rwanda – Healthcare Analytics & Business Intelligence Project.
+# HealthConnect Rwanda – Healthcare Analytics & Business Intelligence Project
 
-## 1. Project Overview
+## Project Overview
 
-The **HealthConnect Rwanda Healthcare Analytics & Business Intelligence Project** is an end-to-end healthcare data analytics solution developed to evaluate healthcare operations, clinical outcomes, patient demographics, financial performance, and service satisfaction across healthcare facilities in Rwanda.
+HealthConnect Rwanda is a healthcare analytics and business intelligence project developed as part of the AnalystLab Africa Data Analytics Internship.
 
-The project focuses on transforming healthcare datasets into meaningful business intelligence through data preparation, relational data modelling, KPI development, interactive Power BI dashboards, and analytical testing.
+The project focuses on transforming healthcare operational, clinical, demographic, and financial data into meaningful insights through data preparation, relational data modelling, KPI development, and interactive Power BI dashboards.
 
-The solution is designed to support healthcare management in understanding operational performance, identifying reporting gaps, monitoring financial indicators, and making evidence-based decisions.
+The solution was developed to support healthcare management by improving visibility into patient demographics, appointment patterns, clinical diagnoses, financial performance, insurance claims, and healthcare operations.
 
-## 2. Project Objectives
+The project progressed through two major phases:
 
-The main objectives are to:
+- **Week 6 – Dashboard Development and System Integration Review**
+- **Week 7 – Testing, KPI Validation and Refinement**
 
-- Analyse healthcare operations and appointment activity.
-- Evaluate patient demographics and clinical diagnosis patterns.
-- Monitor financial performance, billing, and payment collection.
-- Examine healthcare service delivery and patient satisfaction.
-- Develop an integrated Power BI executive dashboard suite.
-- Establish a structured analytical data model.
-- Validate KPIs, calculations, relationships, and dashboard outputs.
-- Identify data quality and reconciliation limitations requiring further investigation.
+## Project Information
 
-## 3. Project Scope and Dataset Overview
-
-The project involved healthcare datasets covering different operational and analytical areas.
-
-Key data coverage includes:
-
-| Dataset / Area | Records or Coverage |
-|---|---:|
-| Patient Profiles | 20,000 |
-| Appointments | 5,000 |
-| Diagnosis Records | 60,000 |
-| Healthcare Facilities | 20 |
-| Medical Equipment | 4,000 records |
-| Bed Records | 2,000 records |
-
-The datasets support analysis of patient demographics, appointments, diagnoses, departments, facilities, billing, payments, and other healthcare operations.
-
-## 4. Week 6 – Executive Dashboard Suite & System Integration Review
-
-Week 6 focused on developing the HealthConnect Rwanda executive dashboard suite and establishing the analytical data model.
-
-### Key Activities
-
-- Imported and reviewed relevant healthcare datasets.
-- Prepared and structured data for Power BI analysis.
-- Developed a relational analytical model using a star schema approach.
-- Created DAX measures for healthcare KPIs.
-- Designed a six-page executive dashboard suite.
-- Developed visualisations covering operational, clinical, demographic, financial, and service-related indicators.
-- Reviewed system integration and data relationships.
-
-### Dashboard Coverage
-
-The six-page dashboard suite was designed to cover:
-
-1. Healthcare Operations and Appointments.
-2. Clinical Outcomes and Diagnosis Analysis.
-3. Patient Demographics.
-4. Financial Performance and Billing.
-5. Patient Satisfaction and Feedback.
-6. Executive Overview and Performance Monitoring.
-
-### Key Analytical Highlights
-
-- Patient demographic analysis covered 20,000 patient profiles.
-- Appointment analysis covered 5,000 appointment records.
-- Diagnosis analysis covered approximately 60,000 diagnosis records.
-- Total billed revenue was approximately RWF 9.31 billion.
-- Total collected revenue was approximately RWF 8.39 billion.
-- Revenue collection rate was approximately 90.1%.
-- The diagnosis analysis identified gastritis, diabetes, hypertension, malaria, and upper respiratory infections among the major diagnosis categories.
-
-## 5. Week 7 – Analytics Testing, KPI Validation & Dashboard Refinement
-
-Week 7 focused on testing the analytical outputs developed during Week 6 and documenting findings that could affect reporting accuracy and interpretation.
-
-### Key Activities
-
-- Reviewed KPI calculations and dashboard outputs.
-- Examined appointment and billing record matching.
-- Investigated revenue allocation and reconciliation differences.
-- Reviewed data quality and blank-value handling.
-- Examined star schema relationships and department filtering.
-- Tested dashboard filters and interactions.
-- Captured screenshots and organised supporting evidence.
-- Documented outstanding findings for further investigation.
-
-### Key Testing Findings
-
-| Testing Area | Observed Result |
-|---|---:|
-| Total Appointments | 5,000 |
-| Billing Appointment Records | Approximately 60,000 |
-| Unique Unmatched AppointmentIDs | Approximately 55,000 |
-| Department Allocated Revenue | RWF 771.13 million |
-| Unmatched Billing Revenue | Approximately RWF 8.54 billion |
-| Revenue_Summary | Approximately RWF 1.13 billion |
-| HC_Billing Revenue | Approximately RWF 9.31 billion |
-| Revenue Reconciliation Measure | Displayed 0 difference |
-
-These findings highlight differences in record matching, revenue allocation, and reconciliation that require further investigation.
-
-The approximately RWF 8.54 billion associated with unmatched records is not classified as lost revenue or unpaid revenue. It represents billing revenue that has not been matched through the appointment-record matching process.
-
-The displayed zero reconciliation difference should also not be interpreted as proof that all revenue sources have been reconciled.
-
-### Outstanding Findings
-
-The following matters remain documented:
-
-- Unmatched AppointmentIDs between appointment and billing records.
-- Billing revenue that has not been allocated through appointment matching.
-- Differences between Revenue_Summary and HC_Billing totals.
-- Blank results during department-level filtering.
-- The interpretation and calculation scope of the revenue reconciliation measure.
-- Outstanding balance and payment-status inconsistencies.
-
-These findings have been retained for further guidance and investigation rather than being presented as resolved issues.
-
-## 6. Data Modelling and Analytical Approach
-
-The project uses a structured analytical modelling approach to organise healthcare data and support reporting across different business areas.
-
-The intended model includes transactional fact tables and supporting dimension tables.
-
-Key modelling considerations include:
-
-- Defining primary and foreign keys.
-- Establishing appropriate relationships.
-- Supporting dimension-to-fact filtering.
-- Reviewing relationship cardinality and filter direction.
-- Validating matching keys across datasets.
-- Avoiding unsupported assumptions when interpreting incomplete or unmatched records.
-
-The model and its relationships were reviewed during Week 7, with some filtering and matching issues retained for further investigation.
-
-## 7. Tools and Technologies
-
-| Tool / Technology | Application |
+| Item | Description |
 |---|---|
-| Microsoft Power BI | Dashboard development and visual analytics |
+| Project Name | HealthConnect Rwanda |
+| Internship | AnalystLab Africa |
+| Track | Data Analytics |
+| Project Period | October–November 2026 |
+| Primary Tool | Microsoft Power BI |
+| Supporting Tools | DAX, Excel, SQL, Python, GitHub |
+| Healthcare Facilities | 20 |
+| Patient Profiles | 20,000 |
+| Appointment Records | 5,000 |
+| Dashboard Pages | 6 |
+
+## Business Problem
+
+Healthcare organizations generate large volumes of clinical, operational, patient, and financial data. However, fragmented information and inconsistent relationships can make it difficult for management to obtain a complete view of healthcare performance.
+
+HealthConnect Rwanda addresses this challenge through an integrated analytics solution designed to:
+
+- Improve visibility into patient demographics and clinical records.
+- Monitor appointment and healthcare service patterns.
+- Analyse financial billing and payment performance.
+- Review insurance claim indicators.
+- Support department and facility-level analysis where data relationships allow.
+- Identify data quality and integration weaknesses.
+- Provide evidence-based insights for management decisions.
+
+## Project Objectives
+
+1. Prepare and analyse healthcare datasets.
+2. Develop a structured relational data model.
+3. Build a six-page interactive executive dashboard.
+4. Create DAX measures for healthcare performance indicators.
+5. Validate dashboard outputs against source datasets.
+6. Test interactive functionality and data relationships.
+7. Identify analytical limitations and recommend improvements.
+
+# Week 6 – Dashboard Development and System Integration Review
+
+## 1. Data Preparation and Integration
+
+The Week 6 phase focused on preparing healthcare datasets and integrating them into a Power BI analytics environment.
+
+The project included patient profiles, appointments, diagnoses, laboratory tests, prescriptions, admissions, billing, payments, insurance claims, and supporting reference data.
+
+The data model was organized to support analysis across multiple healthcare areas.
+
+## 2. Data Model
+
+A relational star-schema-oriented model was developed around the central appointment fact table.
+
+### Main Fact Tables
+
+- `Fact_Appointments`
+- `Fact_Diagnoses`
+- `Fact_Laboratory_Tests`
+- `Fact_Prescriptions`
+- `Fact_Admissions`
+- `Fact_Billing`
+- `Fact_Payments`
+- `Fact_InsuranceClaims`
+
+### Dimension and Reference Tables
+
+- `HC_Patients`
+- `HC_Departments`
+- `HC_Doctor`
+- `HC_Nurse`
+- `HC_Rooms`
+- `HC_Beds`
+- `HC_Medical_Equipment`
+- `Dim_Calendar`
+
+The model was designed to support healthcare analysis through shared identifiers and appropriate table relationships.
+
+## 3. Executive Dashboard Development
+
+A six-page interactive Power BI executive dashboard was developed.
+
+The dashboard covers:
+
+1. Executive Overview
+2. Clinical Outcomes
+3. Patient Demographics
+4. Financial Performance
+5. Operational Performance
+6. Patient Experience
+
+The dashboard incorporates KPI cards, charts, comparisons, slicers, and interactive filtering to support healthcare performance monitoring.
+
+## 4. Week 6 Deliverables
+
+- Data preparation and integration.
+- Relational data modelling.
+- DAX KPI development.
+- Six-page Power BI executive dashboard.
+- Dashboard visuals and interactive features.
+- Initial analytical review.
+
+# Week 7 – Testing, Validation and Refinement
+
+## 1. Testing and Validation
+
+Week 7 focused on verifying the reliability of the Week 6 analytics solution.
+
+The review included:
+
+- KPI calculations and source-data comparisons.
+- Data relationship validation.
+- Appointment category analysis.
+- Patient demographic validation.
+- Diagnosis and insurance KPI checks.
+- Financial performance validation.
+- Interactive dashboard functionality testing.
+- Documentation of data limitations.
+
+## 2. Key Validated Results
+
+### Financial Performance
+
+| KPI | Result |
+|---|---:|
+| Gross Billed Revenue | RWF 9.31 billion |
+| Payments Collected | RWF 8.39 billion |
+| Department Allocated Revenue | RWF 771.13 million |
+| Revenue Summary | RWF 1.13 billion |
+| Outstanding Balance | Approximately RWF 920 million |
+| Collection Rate | Approximately 90.1% |
+| Unallocated Billing Revenue | Approximately RWF 8.54 billion |
+
+### Patient Demographics
+
+| KPI | Result |
+|---|---:|
+| Total Patient Profiles | 20,000 |
+| Male Patients | 10,090 (50.45%) |
+| Female Patients | 9,910 (49.55%) |
+| Average Patient Age | Approximately 45 years |
+
+### Appointment Visit Types
+
+| Visit Type | Count | Percentage |
+|---|---:|---:|
+| Emergency | 1,650 | 33.00% |
+| Follow-up | 1,694 | 33.88% |
+| Consultation | 1,656 | 33.12% |
+| **Total** | **5,000** | **100%** |
+
+### Clinical and Insurance Indicators
+
+- Diagnosis records: approximately 60,000.
+- Gastritis: 12,208 records.
+- Diabetes: 12,083 records.
+- Hypertension: 12,075 records.
+- Malaria: 11,878 records.
+- Upper Respiratory Infection: 11,756 records.
+- Insurance claim approval rate: 49.98%.
+- Chronic condition records include asthma, hypertension, and diabetes.
+
+These diagnosis figures represent recorded diagnosis entries rather than unique patients or population-level prevalence.
+
+## 3. Data Quality Findings
+
+| Validation Area | Result |
+|---|---:|
+| Total Billing Records | 60,000 |
+| Matched Billing Records | 5,000 |
+| Unmatched Billing Records | 55,000 |
+| Distinct Unmatched AppointmentIDs | 1,000 |
+| Matched DepartmentIDs | 200 |
+| Unmatched DepartmentIDs | 0 |
+| Blank Appointment DepartmentIDs | 0 |
+
+The review identified significant billing-to-appointment matching limitations despite successful department identifier matching.
+
+## 4. Dashboard Functionality Testing
+
+The following interactive features were tested successfully:
+
+- Date slicers.
+- Department slicers.
+- Gender slicers.
+- KPI card responsiveness.
+- Chart cross-filtering.
+- Page navigation.
+- Reset and clear filters.
+
+The tested interactions passed the Week 7 functionality review.
+
+## 5. Cross-Track Testing Contribution
+
+The Data Science track reported testing an appointment-related emergency prediction model using hold-out testing, label-shuffle testing, time-based validation, calibration, and segment checks.
+
+The reported results showed weak performance on unseen data, with approximately 0.50 AUC. The model did not meet its release criteria.
+
+The findings highlighted target-label and underlying data limitations, including missing admissions and attendance information and broken table links.
+
+The recommendation was to avoid deployment until the data and target definition were improved.
+
+These results are recorded as Data Science track testing findings relevant to the overall HealthConnect solution.
+
+# Key Data Limitations
+
+The Week 7 validation identified several issues requiring attention:
+
+| Area | Limitation |
+|---|---|
+| Billing Integration | 55,000 billing records remain unmatched to appointment records. |
+| Revenue Reconciliation | Different financial outputs require further investigation. |
+| Facility Mapping | Approximately 5% facility mapping limits facility-level analysis. |
+| Appointment Attendance | No attendance status field is available. |
+| Bed Utilization | No reliable occupancy history. |
+| Room Utilization | Insufficient room occupancy information. |
+| Equipment Utilization | Insufficient usage and downtime history. |
+| Diagnosis Analysis | Diagnosis counts cannot automatically be interpreted as unique patients or prevalence. |
+| Insurance Claims | Pending and blank claim statuses require careful interpretation. |
+
+### Important Appointment Data Clarification
+
+The appointment dataset contains three `VisitType` categories: Emergency, Follow-up, and Consultation.
+
+These represent appointment types, not attendance outcomes.
+
+Attendance Rate and No-Show Rate cannot be calculated because the dataset does not contain an attendance status field.
+
+# Tools and Technologies
+
+| Technology | Application |
+|---|---|
+| Microsoft Power BI | Dashboard development and visualization |
 | DAX | KPI calculations and analytical measures |
-| Microsoft Excel | Data inspection and preparation |
-| Data Modelling | Relational modelling and relationship design |
+| Excel | Data inspection and validation |
+| SQL | Data querying and analysis |
+| Python | Data analysis and validation support |
 | GitHub | Version control and project documentation |
 
-## 8. Project Deliverables
+# Project Structure
 
-The combined Week 6 and Week 7 project work includes:
+```text
+HealthConnect_Rwanda/
+│
+├── Week6_Dashboard_Development/
+│   ├── Data/
+│   ├── PowerBI/
+│   ├── Reports/
+│   ├── Presentations/
+│   ├── Screenshots/
+│   └── README.md
+│
+├── Week7_Testing_Validation_Refinement/
+│   ├── 01_Testing_Plan/
+│   ├── 02_KPI_Validation/
+│   ├── 03_Data_Quality_Validation/
+│   ├── 04_Dashboard_Testing/
+│   ├── 05_Analytical_Validation/
+│   ├── 06_Cross_Track_Collaboration/
+│   ├── 07_Refinement_Evidence/
+│   ├── 08_Screenshots_Evidence/
+│   └── README.md
+│
+└── README.md
+```
 
-- Six-page executive Power BI dashboard suite.
-- Healthcare analytical data model.
-- KPI definitions and DAX measures.
-- Healthcare operational and financial analysis.
-- Executive dashboard review documentation.
-- KPI validation documentation.
-- Testing and validation records.
-- Testing activity tracker.
-- Evidence log and supporting screenshots.
-- Documented data quality and reconciliation findings.
+*Folder names and file placement should reflect the actual files committed to the repository.*
 
-## 9. Project Limitations
+# Overall Project Outcomes
 
-The interpretation of the results is subject to the available datasets and their relationships.
+Across Weeks 6 and 7, the project delivered:
 
-Some limitations identified during the project include:
+- A structured healthcare analytics data model.
+- A six-page interactive Power BI executive dashboard.
+- Healthcare performance KPIs and analytical measures.
+- Financial, demographic, clinical, and appointment analysis.
+- KPI validation against underlying source datasets.
+- Data relationship and quality testing.
+- Dashboard interaction testing.
+- Cross-track testing findings from the Data Science track.
+- Documented data limitations and recommendations for further integration.
 
-- Unmatched appointment identifiers across datasets.
-- Inconsistent revenue totals between certain financial sources.
-- Limited facility and department identifier coverage.
-- Incomplete information for validating some operational measures.
-- Payment and billing status inconsistencies.
-- Department-filtering behaviour requiring further review.
+# Conclusion
 
-These limitations are documented to support transparent reporting and prevent unsupported conclusions.
+HealthConnect Rwanda demonstrates how healthcare data can be transformed into an interactive business intelligence solution for monitoring healthcare operations, patient demographics, clinical records, and financial performance.
 
-## 10. Project Progress
+Week 6 established the dashboard and analytics foundation, while Week 7 focused on testing, validation, and identifying areas requiring further refinement.
 
-| Project Stage | Focus | Status |
-|---|---|---|
-| Week 6 | Executive Dashboard Suite & System Integration Review | Completed |
-| Week 7 | Analytics Testing, KPI Validation & Dashboard Refinement | Completed |
-| Week 8 | Final Integration and Project Readiness | Upcoming |
+The project provides a documented foundation for continued integration and final project preparation in Week 8.
 
-## 11. Conclusion
+---
 
-The HealthConnect Rwanda project demonstrates the application of data analytics and business intelligence techniques to healthcare operations and management reporting.
-
-Through Week 6, the project established an executive dashboard suite and analytical data model. Week 7 extended this work through KPI review, analytical testing, revenue reconciliation investigation, data quality assessment, and dashboard testing.
-
-Together, these stages provide a structured foundation for the remaining project integration and final readiness activities.
-
-**Current Project Status:** Week 6 and Week 7 completed. Outstanding analytical findings documented for further guidance during Week 8.
+**Project:** HealthConnect Rwanda  
+**Program:** AnalystLab Africa Internship  
+**Track:** Data Analytics  
+**Development Phase:** Weeks 6–7  
+**Current Status:** Dashboard development, testing, and validation documented; identified data limitations remain subject to further integration and review.
