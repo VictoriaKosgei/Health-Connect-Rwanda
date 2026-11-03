@@ -1,109 +1,105 @@
-# HealthConnect Rwanda – KPI Validation Report
+# HealthConnect Rwanda – Week 7 KPI Validation Record
 
-## 1. Purpose
+**Project:** HealthConnect Rwanda Healthcare Analytics & Business Intelligence  
+**Program:** AnalystLab Africa Internship – Data Analytics Track  
+**Phase:** Week 7 – Testing, Validation and Refinement  
+**Prepared by:** Victoria Kosgei  
+**Reporting Period:** October–November 2026
 
-This document records the validation and review of key HealthConnect Rwanda performance indicators against the available datasets and Power BI dashboard outputs.
+---
 
-The objective was to assess KPI calculation accuracy, data consistency, model relationships and the reliability of analytical results before final project integration.
+## 1. Purpose of KPI Validation
 
-The validation covered financial performance, appointments, patient demographics, diagnosis records, emergency visits, data quality and dashboard outputs.
+The purpose of this validation exercise was to review the HealthConnect Rwanda Power BI dashboard and verify that its key performance indicators (KPIs), calculations, and analytical outputs accurately represent the underlying datasets.
+
+The validation focused on:
+
+- Comparing dashboard values against source data.
+- Checking financial calculations and payment summaries.
+- Validating patient demographics and appointment categories.
+- Reviewing diagnosis and insurance indicators.
+- Identifying inconsistencies caused by missing or unmatched records.
+- Confirming that the dashboard provides reliable information for management decision-making.
 
 ## 2. Financial KPI Validation
 
-| KPI | Calculation / Definition | Actual Result | Validation Status |
-|---|---|---:|---|
-| Total Billed Revenue | Sum of HC_Billing amounts | RWF 9.31 billion | Recalculated and matched |
-| Total Collected Revenue | Sum of HC_Payment amounts | RWF 8.39 billion | Recalculated and matched |
-| Collection Rate | Collected Revenue ÷ Billed Revenue × 100 | 90.1% | Calculation reviewed |
-| Outstanding Balance | Billed Revenue − Collected Revenue | Approximately RWF 920 million | Reviewed |
-| Status-Based Outstanding | Sum of outstanding bills based on billing status | RWF 919.95 million | Reconciliation required |
-| Department Allocated Revenue | Billing revenue associated with matched appointment records and allocated to departments | RWF 771.13 million | Reviewed |
-| Unallocated Billing Revenue | Billing revenue without successful appointment allocation | Approximately RWF 8.54 billion | Issue identified |
-| Billing Revenue Reconciliation | Reconciliation measure displayed in the dashboard | RWF 0 | Requires investigation |
-| Revenue Summary | Revenue reported in Revenue_Summary | Approximately RWF 1.13 billion | Discrepancy identified |
+| KPI | Validated Result | Validation / Interpretation |
+|---|---:|---|
+| Gross Billed Revenue | RWF 9.31 billion | Confirmed against `HC_Billing[Amount]`. |
+| Payments Collected | RWF 8.39 billion | Confirmed against `HC_Payment[AmountPaid]`. |
+| Department Allocated Revenue | RWF 771.13 million | Revenue associated with billing records whose AppointmentIDs match appointment records. |
+| Revenue Summary | RWF 1.13 billion | Confirmed dashboard summary value. |
+| Outstanding Balance | Approximately RWF 920 million | Difference between gross billed revenue and payments collected. |
+| Status-Based Outstanding | RWF 919.95 million | Confirmed using billing status-based calculation. |
+| Collection Rate | Approximately 90.1% | Payments collected compared with gross billed revenue. |
+| Unallocated Billing Revenue | Approximately RWF 8.54 billion | Billing revenue not allocated through the appointment matching relationship. |
+| Billing Revenue Reconciliation | RWF 0 displayed | Dashboard output recorded; this does not independently establish that the financial datasets reconcile. |
 
-### 2.1 Financial Validation Findings
+### Financial Validation Findings
 
-- Total billed revenue was approximately RWF 9.31 billion.
-- Recorded payments amounted to approximately RWF 8.39 billion.
-- The calculated collection rate was approximately 90.1%.
-- The calculated outstanding balance was approximately RWF 920 million.
-- Status-based outstanding bills amounted to RWF 919.95 million.
-- The difference between the two outstanding balance calculations was approximately RWF 50,000.
-- Department allocated revenue was approximately RWF 771.13 million.
-- Approximately RWF 8.54 billion remained unallocated because of unmatched appointment identifiers.
-- The Revenue_Summary value of approximately RWF 1.13 billion did not agree with the HC_Billing total.
-- The dashboard reconciliation measure displayed RWF 0, but this result requires further investigation before it can be treated as evidence of successful reconciliation.
+The gross billed revenue and payments collected measures were checked against their respective source tables and returned the same values as the dashboard.
 
-### 2.2 Financial Interpretation
+However, the relationship between `HC_Billing` and `Fact_Appointments` revealed a significant matching issue.
 
-The financial results represent different levels of analysis:
+- Total billing records: 60,000.
+- Matched billing records: 5,000.
+- Unmatched billing records: 55,000.
+- Distinct unmatched AppointmentIDs: 1,000.
+- Gross billed revenue: RWF 9.31 billion.
+- Department Allocated Revenue: approximately RWF 771.13 million.
 
-- **Total Billed Revenue:** All recorded billing amounts.
-- **Total Collected Revenue:** All recorded payment amounts.
-- **Department Allocated Revenue:** Billing revenue successfully associated with matched appointment records and allocated to departments.
-- **Unallocated Billing Revenue:** Billing revenue that could not be allocated through the available appointment relationship.
+The Department Allocated Revenue figure represents the portion associated with matched appointments. It should not be interpreted as the full gross billed revenue.
 
-The difference between gross billed revenue and department allocated revenue is therefore an important data-model and reconciliation limitation.
+The Revenue Summary value of RWF 1.13 billion was also confirmed as the displayed dashboard result. It is retained as a separate metric and should not be assumed to reconcile with the HC_Billing total.
 
-**Conclusion:** Gross billed revenue and payments collected were independently recalculated and matched the dashboard values. Other financial measures were reviewed, but complete financial reconciliation remains outstanding.
+## 3. Patient Demographic KPI Validation
 
-## 3. Appointment KPI Validation
+| KPI | Validated Result |
+|---|---:|
+| Total Patient Profiles | 20,000 |
+| Male Patients | 10,090 (50.45%) |
+| Female Patients | 9,910 (49.55%) |
+| Average Patient Age | Approximately 45 years |
 
-| KPI | Definition | Actual Result | Validation Status |
-|---|---|---:|---|
-| Total Appointments | Count of records in Fact_Appointments | 5,000 | Verified |
-| Billing Records | Count of records in HC_Billing | 60,000 | Verified |
-| Appointment IDs in Fact_Appointments | Distinct appointment identifiers in the appointment dataset | 5,000 | Verified |
-| Matched Appointment IDs | Appointment identifiers successfully matched between the datasets | 5,000 | Reviewed |
-| Unmatched Billing Records | Billing records associated with appointment identifiers absent from Fact_Appointments | 55,000 | Issue identified |
-| Distinct Unmatched Appointment IDs | Unique unmatched identifiers in the billing dataset | 1,000 | Issue identified |
+### Validation Finding
 
-### 3.1 Appointment Validation Findings
+The patient demographic figures were reviewed and confirmed. The gender distribution is relatively balanced, with male patients representing 50.45% and female patients representing 49.55% of the patient records.
 
-The appointment dataset contained 5,000 records, while the billing dataset contained 60,000 records.
+## 4. Appointment Visit-Type Validation
 
-All 5,000 appointment identifiers in Fact_Appointments were represented in the matching process.
+The `Fact_Appointments` dataset contains 5,000 appointment records. The `VisitType` field identifies three appointment categories.
 
-However, 55,000 billing records were associated with 1,000 distinct appointment identifiers that were not present in Fact_Appointments.
+| Visit Type | Appointment Count | Percentage |
+|---|---:|---:|
+| Emergency | 1,650 | 33.00% |
+| Follow-up | 1,694 | 33.88% |
+| Consultation | 1,656 | 33.12% |
+| **Total** | **5,000** | **100%** |
 
-The additional identifiers ranged from 5001 to 6000.
+### Validation Finding
 
-This mismatch affected the relationship between billing and appointment data and contributed to blank department results when billing revenue was analyzed through the appointment relationship.
+The three visit-type categories account for all 5,000 appointment records.
 
-**Conclusion:** Appointment identifiers and their matching results were reviewed. Full billing-to-appointment reconciliation remains incomplete.
+Follow-up appointments represent the largest category at 33.88%, followed by Consultation at 33.12% and Emergency at 33.00%.
 
-## 4. Patient Demographic and Diagnosis KPI Validation
+These categories describe the type of healthcare visit. They do not indicate whether a patient attended, missed, or cancelled an appointment.
 
-### 4.1 Patient Demographics
+## 5. Diagnosis and Chronic Condition Validation
 
-| KPI | Definition | Actual Result | Validation Status |
-|---|---|---:|---|
-| Total Patients | Count of patient records | 20,000 | Reviewed |
-| Male Patients | Count of records with Male gender | 10,090 | Reviewed |
-| Female Patients | Count of records with Female gender | 9,910 | Reviewed |
-| Male Patient Share | Male patients ÷ total patients × 100 | 50.45% | Counter-checked |
-| Female Patient Share | Female patients ÷ total patients × 100 | 49.55% | Counter-checked |
-| Average Patient Age | Average of recorded patient ages | Approximately 45 years | Reviewed |
+### Diagnosis Records
 
-The gender distribution was corrected and counter-checked:
+The diagnosis dataset contains approximately 60,000 diagnosis records.
 
-- Male: 50.45%.
-- Female: 49.55%.
-
-### 4.2 Diagnosis Distribution
-
-The diagnosis dataset contained approximately 60,000 diagnosis records.
-
-| Diagnosis | Diagnosis Records | Share of Diagnosis Records |
+| Diagnosis Category | Records | Percentage |
 |---|---:|---:|
 | Gastritis | 12,208 | 20.3% |
 | Diabetes | 12,083 | 20.1% |
 | Hypertension | 12,075 | 20.1% |
 | Malaria | 11,878 | 19.8% |
 | Upper Respiratory Infection | 11,756 | 19.6% |
+| **Total** | **60,000** | **100%** |
 
-### 4.3 Chronic Condition Records
+### Chronic Condition Records
 
 | Chronic Condition | Records |
 |---|---:|
@@ -111,38 +107,58 @@ The diagnosis dataset contained approximately 60,000 diagnosis records.
 | Hypertension | 4,988 |
 | Diabetes | 4,945 |
 
-### 4.4 Interpretation
+### Validation Findings
 
-The diagnosis figures represent diagnosis records rather than necessarily representing unique patients or disease prevalence.
+- Diagnosis category relationships were checked.
+- Zero orphaned diagnosis categories were identified.
+- The diagnosis figures represent diagnosis records, not necessarily unique patients or disease prevalence.
+- Chronic condition counts are retained as recorded in the source data.
 
-The diagnosis categories were reviewed following the data-model validation work.
+## 6. Insurance KPI Validation
 
-**Conclusion:** Patient demographics and diagnosis distributions were reviewed against the available records. The findings should be interpreted within the limits of the available data.
+| KPI | Validated Result |
+|---|---:|
+| Insurance Claim Approval Rate | 49.98% |
 
-## 5. Emergency and Attendance Analysis
+### Validation Finding
 
-| KPI | Definition | Actual Result | Validation Status |
-|---|---|---:|---|
-| Emergency Visits | Count of appointments classified as Emergency | 1,650 | Reviewed |
-| Emergency Visit Share | Emergency visits ÷ 5,000 appointments × 100 | 33% | Calculation reviewed |
-| Attendance | Appointments attended according to recorded status | Pending final confirmation | Outstanding |
-| No-Show Rate | No-show appointments ÷ applicable appointment records × 100 | Pending final confirmation | Outstanding |
+The insurance approval rate and related dashboard visual were reviewed and counter-checked. The displayed approval rate was confirmed.
 
-### 5.1 Validation Notes
+Claim statuses include Pending and blank values. These should not automatically be interpreted as rejected claims.
 
-Emergency visits are based on appointment type.
+## 7. Department and Facility Mapping Validation
 
-Appointment types such as Follow-up, Consultation and Emergency must not be confused with attendance outcomes.
+| Validation Check | Result |
+|---|---:|
+| Matched DepartmentIDs | 200 |
+| Unmatched DepartmentIDs | 0 |
+| Blank DepartmentIDs in Fact_Appointments | 0 |
+| Facility Mapping | Approximately 5% |
 
-Attendance and no-show calculations require confirmation using the actual appointment status values and underlying records in Fact_Appointments.
+### Validation Findings
 
-The appropriate appointment population for these calculations is the 5,000 appointment records, not the 60,000 billing records.
+All 200 department identifiers in the appointment records matched the department reference data.
 
-**Conclusion:** Emergency visit analysis was reviewed. Attendance and no-show validation remains outstanding until the underlying status values and calculations are confirmed.
+Facility mapping remains limited, at approximately 5%. Therefore, facility-level comparisons and conclusions should be interpreted cautiously.
 
-## 6. Data Quality and Model Validation
+## 8. Overall KPI Validation Summary
 
-| Validation Area | Finding | Status |
-|---|---|---|
-| Blank Values | Blank values were omitted from relevant analysis during data preparation | Action applied |
-| Appointment
+The KPI review confirmed the principal financial, demographic, appointment visit-type, diagnosis, and insurance values recorded in the dashboard.
+
+The validation also identified limitations in billing-to-appointment matching and facility mapping. These affect the extent to which some financial and facility-level findings can be interpreted.
+
+Attendance and no-show rates are not available because the appointment dataset does not contain an attendance status field.
+
+The validated KPIs are retained for the Week 7 dashboard review, with the identified limitations documented separately.
+
+## 9. Week 8 Considerations
+
+- Improve billing-to-appointment record matching.
+- Investigate the difference between the Revenue Summary and HC_Billing totals.
+- Improve facility mapping before relying on facility-level comparisons.
+- Capture appointment attendance outcomes in future data collection.
+- Maintain validation checks when new records and dashboard updates are integrated.
+
+---
+
+**Document Status:** Week 7 KPI validation record – updated with confirmed appointment visit-type counts and documented data limitations.
