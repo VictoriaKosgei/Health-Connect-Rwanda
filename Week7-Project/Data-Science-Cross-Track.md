@@ -70,23 +70,11 @@ The findings highlight the importance of:
 
 These issues are relevant to the reliability of the wider HealthConnect Rwanda analytical solution.
 
-## 8. Evidence Required
-
-The following supporting evidence should be retained where available:
-
-- Hold-out testing results.
-- Label-shuffle test results.
-- Time-based split results.
-- Calibration and segment checks.
-- Model performance comparison.
-- Release-gate decision.
-- Data Science testing notebook or screenshots.
-
-## 9. Collaboration Contribution
+## 8. Collaboration Contribution
 
 The precise individual contribution of the Data Analytics intern and the information exchanged between tracks must be confirmed before this record is finalized.
 
-## 10. Conclusion
+## 9. Conclusion
 
 The reported Data Science findings indicate that the emergency-risk model was not ready for deployment.
 
