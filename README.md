@@ -436,52 +436,7 @@ Department Allocated Revenue should not be interpreted as the complete financial
 
 ---
 
-# 10. Project Folder Structure
-
-The following structure is a recommended organization for the combined Weeks 6–8 project. Adjust folder and file names to match the actual files committed to GitHub.
-
-```text
-HealthConnect_Rwanda/
-│
-├── README.md
-│
-├── Week6_Dashboard_Development/
-│   ├── Data/
-│   ├── PowerBI/
-│   │   └── HealthConnect_Rwanda_Dashboard.pbix
-│   ├── Reports/
-│   ├── Presentations/
-│   ├── Screenshots/
-│   └── README.md
-│
-├── Week7_Testing_Validation_Refinement/
-│   ├── 01_Testing_Plan/
-│   ├── 02_KPI_Validation/
-│   ├── 03_Data_Quality_Validation/
-│   ├── 04_Dashboard_Testing/
-│   ├── 05_Analytical_Validation/
-│   ├── 06_Cross_Track_Collaboration/
-│   ├── 07_Refinement_Evidence/
-│   ├── 08_Screenshots_Evidence/
-│   └── README.md
-│
-└── Week8_Final_Integration_Presentation/
-    ├── README.md
-    ├── 01_Integration_Readiness/
-    ├── 02_Final_Analytics_Package/
-    │   ├── Final_KPI_and_Executive_Summary.md
-    │   └── Business_Insights_and_Recommendations.md
-    ├── 03_Final_Presentation/
-    │   └── Final_Presentation.pptx
-    └── 04_Evidence/
-        ├── Dashboard_Screenshots/
-        ├── Validation_Evidence/
-        └── Testing_Evidence/
-```
-
----
-
-# 11. Overall Project Outcomes
+# 10. Overall Project Outcomes
 
 Across Weeks 6, 7 and 8, the project delivered:
 
